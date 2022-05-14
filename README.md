@@ -14,3 +14,4 @@ python run.py train_evaluate configs/256_interpolate_aug.yaml data256/eval/featu
 
 3. 结果在experiments中生成，最优结果已在experiments中给出。
 
+4. 项目报告见Report.pdf
