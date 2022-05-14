@@ -1,0 +1,22 @@
+data:
+    feature: data/dev/feature.csv
+    label: data/dev/label.csv
+    class_indice_file: data/metadata/class_label_indices.txt
+    stratified: True
+dataloader_args:
+    batch_size: 32
+    num_workers: 1
+
+optimizer:
+    type: AdamW
+    args:
+        lr: 0.001
+
+epochs: 100
+model:
+    type: Crnn_pooling1
+    args:
+        ks: 5
+        nl: 1
+
+outputpath: experiments/

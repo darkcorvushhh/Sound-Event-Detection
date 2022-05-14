@@ -1,0 +1,27 @@
+data:
+    feature: data256/dev/feature.csv
+    label: data256/dev/label.csv
+    class_indice_file: data256/metadata/class_label_indices.txt
+    stratified: True
+
+dataloader_args:
+    batch_size: 32
+    num_workers: 16
+
+#transforms: [freqmask, timemask, shift]
+transforms: [timemask]
+
+optimizer:
+    type: AdamW
+    args:
+        lr: 0.0006
+
+epochs: 100
+
+model:
+    type: Crnn_256_interpolate
+    args:
+        ks: 3
+        nl: 2
+
+outputpath: experiments/
